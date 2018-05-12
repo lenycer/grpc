@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "me.lenycer.grpc.proto";
+option java_outer_classname = "LenycerProto";
+
+service LenycerService {
+
+    rpc verifyHimself(LenycerReq) returns (LenycerRes) {}
+
+}
+
+message LenycerReq {
+    string id = 1;
+    string name = 2;
+    string address = 3;
+}
+
+message LenycerRes {
+    LenycerResult lenycerResult = 1;
+    string message = 2;
+}
+
+enum LenycerResult {
+    RESULT_OK = 0;
+    RESULT_FAIL = 1;
+    RESULT_UNKNOWN = 2;
+}
