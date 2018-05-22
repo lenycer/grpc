@@ -5,8 +5,9 @@
 
 
 #### client 
-  simple blockstub test
-  thread safe test
+ - simple blockstub test
+ - thread safe test
+
 
 #### server
-  multiple service add test.
+ - multiple service add test.
